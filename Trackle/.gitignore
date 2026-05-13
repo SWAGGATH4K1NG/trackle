@@ -10,7 +10,7 @@ lerna-debug.log*
 
 #importantIgnore
 .env
-Trackle/.vite/deps
+.vite/deps
 
 node_modules
 dist
