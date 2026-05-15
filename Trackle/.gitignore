@@ -11,11 +11,13 @@ lerna-debug.log*
 #importantIgnore
 .env
 .vite/deps
+backend/collectors/__pycache__
 
 node_modules
 dist
 dist-ssr
 *.local
+Trackle/.vite/
 
 # Editor directories and files
 .vscode/*
