@@ -2,11 +2,13 @@ import psutil
 import pprint
 import datetime
 import socket
+import logging
+
 
 def get_network_data():
     return {
     #Network
-    "connections": psutil.net_connections(),
+    "connections": connections,
     "speed": psutil.net_if_stats(),
     "addrs": psutil.net_if_addrs(),
     "net_io_counters": psutil.net_io_counters(),
@@ -16,7 +18,7 @@ def get_network_data():
 
 }
 
-
+print(get_network_data())
 
 
 
