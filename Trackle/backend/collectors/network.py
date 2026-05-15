@@ -3,7 +3,8 @@ import pprint
 import datetime
 import socket
 
-network_data = {
+def get_network_data():
+    return {
     #Network
     "connections": psutil.net_connections(),
     "speed": psutil.net_if_stats(),
@@ -15,6 +16,7 @@ network_data = {
 
 }
 
-pprint.pprint(network_data, sort_dicts=False)
+
+
 
 

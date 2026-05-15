@@ -5,8 +5,8 @@ import time
 
 while True:
     data = {
-        "network": network.network_data,
-        "hardware": hardware.hardware_data
+        "network": network.get_network_data(),
+        "hardware": hardware.get_hardware_data()
     }
     print(json.dumps(data))
     time.sleep(1)

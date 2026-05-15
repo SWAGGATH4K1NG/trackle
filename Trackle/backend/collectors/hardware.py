@@ -1,7 +1,8 @@
 import psutil
 import datetime
 
-hardware_data = {
+def get_hardware_data():
+    return {
     #CPU
     "cpu_freq": psutil.cpu_freq(),
     "cpu_stats": psutil.cpu_stats(),
@@ -17,5 +18,3 @@ hardware_data = {
     "disk_usage": psutil.disk_usage("C://"),
     "disk_io_counters": psutil.disk_io_counters(),
 }
-
-print(hardware_data)

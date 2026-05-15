@@ -11,6 +11,7 @@ lerna-debug.log*
 #importantIgnore
 .env
 .vite/deps
+backend/collectors/__pycache__
 
 node_modules
 dist
