@@ -7,7 +7,6 @@ import { Network, Hardware } from "./types";
 function App() {
   const [networkData, setNetworkData] = useState<Network | null>(null);
   const [hardwareData, setHardwareData] = useState<Hardware | null>(null);
-  const [data, setData] = useState<any>({});
   useEffect(() => {
   let unlistenFn: any;
 
@@ -16,7 +15,7 @@ function App() {
       const parsed = JSON.parse(event.payload as string);
       setNetworkData(parsed.network);
       setHardwareData(parsed.hardware);
-      setData(parsed);
+
     });
   };
 
@@ -36,7 +35,7 @@ function App() {
       {networkData?.speed?.["Wi-Fi"] && (
         <StatCard title="Wi-Fi" value={networkData?.speed?.["Wi-Fi"]?.[2] + " Mbps"} />
       )}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <StatCard title="Hostname (PC)" value={networkData?.hostname || "N/A"} />
       
     </div>
   );

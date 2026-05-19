@@ -18,6 +18,7 @@ dist
 dist-ssr
 *.local
 Trackle/.vite/
+Trackle/backend/collectors/__pycache__
 
 # Editor directories and files
 .vscode/*
